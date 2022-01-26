@@ -1,0 +1,202 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Graphical_ADB"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Name="window" x:Class="Graphical_ADB.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="475" Width="730" FontFamily="Microsoft YaHei UI" AllowsTransparency="True" WindowStyle="None" Background="{x:Null}" ResizeMode="NoResize">
+    <Grid>
+        <Rectangle x:Name="Background" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="{Binding Height, ElementName=window}" Stroke="Black" VerticalAlignment="Top" Width="{Binding Width, ElementName=window}" RadiusY="4.5" RadiusX="4.5"/>
+        <ProgressBar x:Name="进度" IsIndeterminate="False" Margin="10,465,10,6" BorderBrush="{x:Null}" Background="{x:Null}" />
+        <Grid x:Name="按键" Margin="10,35,10,270">
+            <Canvas x:Name="Features" Margin="0,0,0,140">
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Click="Button_Click">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="PowerStandby"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="65" Click="Button_Click_1">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="VolumePlus"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="130" Click="Button_Click_2">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="VolumeMinus"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="325" Click="Button_Click_5">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="KeyboardReturn"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="195" Click="Button_Click_3">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="MenuOpen"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="260" Click="Button_Click_4">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="Home"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="390" Click="Button_Click_6">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="ArrowUp"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="455" Click="Button_Click_7">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="ArrowDown"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="520" Click="Button_Click_8">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="ArrowLeft"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="585" Click="Button_Click_9">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="ArrowRight"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="650" Click="Button_Click_10">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="RadioboxMarked"/>
+                </Button>
+            </Canvas>
+            <Canvas x:Name="Number" Margin="0,35,0,105">
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="Numeric1"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="65">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="Numeric2"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="130">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="Numeric3"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="195">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="Numeric4"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="260">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="Numeric5"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="325">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="Numeric6"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="390">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="Numeric7"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="455">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="Numeric8"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="520">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="Numeric9"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="585">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="Numeric0"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="650" Click="Button_Click_14">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="Refresh"/>
+                </Button>
+            </Canvas>
+            <Canvas x:Name="Letter_1" Margin="0,70">
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="AlphaA"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="65">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="AlphaB"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="130">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="AlphaC"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="195">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="AlphaD"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="260">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="AlphaE"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="325">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="AlphaF"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="390">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="AlphaG"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="455">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="AlphaH"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="520">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="AlphaI"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="585">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="AlphaJ"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="650">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="AlphaK"/>
+                </Button>
+            </Canvas>
+            <Canvas x:Name="Letter_2" Margin="0,105,0,35">
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="AlphaL"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="65">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="AlphaM"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="130">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="AlphaN"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="195">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="AlphaO"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="260">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="AlphaP"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="325">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="AlphaQ"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="390">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="AlphaR"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="455">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="AlphaS"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="520">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="AlphaT"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="585">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="AlphaU"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="650">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="AlphaV"/>
+                </Button>
+            </Canvas>
+            <Canvas x:Name="Letter_3" Margin="0,140,0,0">
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="AlphaW"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="65">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="AlphaX"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="130">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="AlphaY"/>
+                </Button>
+                <Button HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Canvas.Left="195">
+                    <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Width="25" Kind="AlphaZ"/>
+                </Button>
+            </Canvas>
+        </Grid>
+        <TextBlock x:Name="Inf" HorizontalAlignment="Left" TextWrapping="Wrap" Text="未连接到设备..." VerticalAlignment="Top" Margin="530,184.76,0,0" Foreground="Black" Width="190" TextAlignment="Right"/>
+        <Grid x:Name="设备" Margin="270,175,140,270">
+            <TextBox x:Name="IP" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="192.168.1.107" VerticalAlignment="Top" Width="167.13" Margin="22.87,3,0,0"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="IP：" VerticalAlignment="Top" Margin="0,7,0,0"/>
+            <Button x:Name="连接" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Click="Button_Click_15" Margin="195,0,0,0" Content="连接"/>
+        </Grid>
+        <Button x:Name="取消" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="60" Margin="530,175,0,0" Content="断开" Click="取消_Click"/>
+        <Grid HorizontalAlignment="Left" Height="255" VerticalAlignment="Top" Width="710" Margin="10,210,0,0">
+            <Rectangle HorizontalAlignment="Left" Height="255" Stroke="#FF7A7A7A" VerticalAlignment="Top" Width="250"/>
+            <ScrollViewer x:Name="框" HorizontalAlignment="Left" Height="255" VerticalAlignment="Top" Width="250">
+                <TextBlock x:Name="日志" TextWrapping="Wrap"/>
+            </ScrollViewer>
+        </Grid>
+        <Grid x:Name="标题" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="730" MouseMove="标题_MouseMove" Background="#00000000">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="ADB网络遥控器" VerticalAlignment="Top" Margin="30.703,7.22,0,0" FontSize="14"/>
+            <materialDesign:PackIcon HorizontalAlignment="Left" VerticalAlignment="Top" Height="17.78" Width="15"  Margin="13.333,7.22,0,0" Kind="CameraControl"/>
+            <Button
+                Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="关闭程序" Height="Auto" Margin="705,0,0,0" Width="Auto" Background="{x:Null}" BorderBrush="{x:Null}" Click="Button_Click_11">
+                <materialDesign:PackIcon Kind="CloseThick" />
+            </Button>
+            <Button
+                Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="最小化" Height="Auto" Margin="680,0,25,0" Width="Auto" Background="{x:Null}" BorderBrush="{x:Null}" Click="Button_Click_12">
+                <materialDesign:PackIcon Kind="WindowMinimize" />
+            </Button>
+            <Button
+                Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="程序设置" Height="Auto" Margin="655,0,50,0" Width="Auto" Background="{x:Null}" BorderBrush="{x:Null}" Visibility="Collapsed">
+                <materialDesign:PackIcon Kind="Cog" />
+            </Button>
+        </Grid>
+        <Rectangle HorizontalAlignment="Left" Height="255" Stroke="#FF7A7A7A" VerticalAlignment="Top" Width="453.278" Margin="266.722,210,0,0"/>
+        <Image x:Name="监控" HorizontalAlignment="Left" Height="255" VerticalAlignment="Top" Width="453.278" Margin="266.722,210,0,0"/>
+        <TextBlock x:Name="信息" HorizontalAlignment="Left" Height="15" Margin="595,450,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="122.5" TextAlignment="Right" Foreground="#FF9C0000"/>
+    </Grid>
+</Window>
