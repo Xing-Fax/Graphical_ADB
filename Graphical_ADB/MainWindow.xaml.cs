@@ -136,6 +136,7 @@ namespace Graphical_ADB
                     监控.Source = ToBitmapImage(new MemoryStream(byData));
                 }));
 
+                }
             }
 
             //while (true)
